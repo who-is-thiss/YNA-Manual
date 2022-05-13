@@ -1,0 +1,6 @@
+{oneline:
+    {when:{arglen};eq;1;{set:hasArgs;0;};{set:hasArgs;1;};}
+    {when:{newarg2};eq;tagstyle;{call:taginfo-set:tagstyle;};}
+    {when:{newarg2};eq;advanced;{call:taginfo-set:advanced;};}
+    {when:{hasArgs};eq;0;{call:taginfo-settingsnoarg;};}
+;}

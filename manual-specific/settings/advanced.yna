@@ -1,0 +1,6 @@
+{oneline:
+    {save:cradv{callerid};1;}
+    {when:{advanced};eq;True;{save:advanced{callerid};False;}{set:isAdvTrue;0;};{save:advanced{callerid};True;}{set:isAdvTrue;1;};}
+    {when:{isAdvTrue};eq;1;Succesfully enabled Advanced Manual Chapters.;}
+    {when:{isAdvTrue};eq;0;Succesfully disabled Advanced Manual Chapters.;}
+;}
