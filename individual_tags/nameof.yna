@@ -1,0 +1,9 @@
+== NameOf ==
+Gives you the attribute of a member. Can be edited.
+	***Syntax:***
+	`\{nameof}` doesn't work. You have to give it attributes!
+	`\{nameof:907376451601432596;display_name;}` displays: ```{nameof:907376451601432596;display_name;}```
+**(In this example, we search for the ID 907376451601432596 and we show the display_name attribute of it.) There's different attributes!**
+	`\{nameof:196574963673595904;nick;}` displays: ```{nameof:196574963673595904;nick;}```
+**If you wish to use this, you must have an user's ID. How can you get it? Use the following command: `+t manual userid`**
+**To see the full list of attributes, go to this website: https://discordpy.readthedocs.io/en/rewrite/api.html#member**

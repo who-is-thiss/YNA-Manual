@@ -1,0 +1,12 @@
+== Time ==
+Displays the current UTC time. Can be modified.
+	***Syntax:*** 
+	`\{time}` displays: ```{time}```
+	`\{time:1;}` displays: ```{time:1;}``` (The number is the hours added to the time given. In this example, we added one.)
+**You can also edit it to make it look different!**
+	`\{time:1;%H:%M:%S;}` displays: ```{time:1;%H:%M:%S;}```
+**You can find all the templates here: https://docs.python.org/3.4/library/datetime.html#strftime-strptime-behavior**
+**Just change the `%H:%M:%S` to whatever you prefer.**
+	`\{time:1;%d/%m/%Y-%H:%M:%S;}` displays: ```{time:1;%d/%m/%Y-%H:%M:%S;}``` (In this example you can see the day, month, and year.)
+**You can also store it to variables! (NOTE: If you do so, you can't use custom templates. Only `%H:%M` works.)**
+	`\{time<k>:1;;}` displays nothing. To show the saved test, use: `\{time<k>;}` which displays: ```{time<k>;}``` (The letter can be changed.)

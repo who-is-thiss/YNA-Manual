@@ -1,0 +1,7 @@
+== Random User ==
+Selects a user at random, and displays the given attribute.
+    ***Syntax:***
+    `\{user;}` displays: ```{user;}```
+**You can change what you see from the user.**
+    `\{user:display_name;}` displays: ```{user:display_name;}```
+**To see the full list of attributes, go to this website: https://discordpy.readthedocs.io/en/rewrite/api.html#member**

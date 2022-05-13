@@ -1,0 +1,6 @@
+== Replace ==
+Find a specified letter/expression and replace it with another letter/expression.
+    ***Syntax:***
+    `\{rep:hey;\"Hey everyone\!\";Hello;}` will search in the text \"Hey everyone\!\" for the word \"hey\", and then, replace it with \"Hello\", so it will display {rep:hey;\"Hey everyone\!\";Hello;}
+**There's a new syntax that you can enable. If you wish to do so, you must run the following command: `\{set:newrep;true;}` and then use the new syntax.**
+    `\{rep:hey;Hello;\"Hey everyone\!\";}` is the new syntax. In this example, it'll do the exact same thing as the one above. Just change the last two arguments!

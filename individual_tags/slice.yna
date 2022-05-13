@@ -1,0 +1,4 @@
+== Slice ==
+Cuts text. Simple, right?
+	***Syntax:***
+	`\{slice:3;this;}` displays: ```s``` (It will give you the #+1 character. If given `\{slice:5\}", it will give you the 6th character. Counts spaces too.)

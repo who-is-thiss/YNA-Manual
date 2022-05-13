@@ -1,0 +1,6 @@
+== Case ==
+These change the given content to UPPERCASE, lowercase, or Title Case.
+	The ***Syntax:***
+	`\{upper:text;}` displays: ```TEXT```
+	`\{lower:text;}` displays: ```text```
+	`\{upper:text;}` displays: ```Text```

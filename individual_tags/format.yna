@@ -1,0 +1,15 @@
+== Format Objects ==
+There are two types of objects. "Format Objects" and "Evaluation Objects". Format Objects will output a value, nothing too special. To use them, surround them with curly brackets. \{tag}
+Go to page 2: `{tagstyle} {tag} format-2`
+
+`tag` = {tag} (The tag's name.)
+`me` = {me} (Tag creator.)
+`meid` = {meid} (Tag creator's ID.)
+`caller` = {caller} (Who run the command.)
+`callerid` = {callerid} (The ID of the person running the command.)
+`channel` = {channel} (The channel where the command was run.)
+`channelid` = {channelid} (The channel's ID where the command was run.)
+`server` = {server} (Server's name.)
+`serverid` = {serverid} (The server's ID.)
+`time` = {time} (Current time as of when the command was run.)
+`uses` = {uses} (How many times the command was used.)

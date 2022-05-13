@@ -1,0 +1,4 @@
+== Parse ==
+Changes the content given into URL-Friendly characters.
+	***Syntax:***
+	`\{parse:`Hey there! How are you?`;}` displays: ```{parse:`Hey there! How are you?`;}```

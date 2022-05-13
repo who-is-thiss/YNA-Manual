@@ -1,0 +1,6 @@
+== Functions ==
+Functions work just like `\{set}`, but for code only. Simple!
+    ***Syntax:***
+    `\{func:myfunction;\{choose:one;two;};}` will create a new object called \{myfunction}. Whenever you call it, the code `\{choose:one;two;}` will run.
+**You can store plain text on them, but it's not recommended. For this, you should use `set` or `save`! (Check them at `+t manual set` or `+t manual save`.)**
+    `\{func:myfunction;Hello!;}` will create a new object called \{myfunction}. Whenever you call it, it will display \"Hello!\".
