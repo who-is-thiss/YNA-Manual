@@ -1,0 +1,26 @@
+{oneline:
+    {when:"{args}";eq;"info";{call:taginfo-info;};}
+    {when:"{args}";eq;"basics";{call:taginfo-basics;};}
+    {when:"{args}";eq;"basics-2";{call:taginfo-basics-2;};}
+    {when:"{args}";eq;"help";{call:taginfo-missingarg;};}
+    {when:"{args}";eq;"format";{call:taginfo-format;};}
+    {when:"{args}";eq;"case";{call:taginfo-function:case;};}
+    {when:"{args}";eq;"length";{call:taginfo-function:length;};}
+    {when:"{args}";eq;"slice";{call:taginfo-function:slice;};}
+    {when:"{args}";eq;"parse";{call:taginfo-function:parse;};}
+    {when:"{args}";eq;"choose";{call:taginfo-function:choose;};}
+    {when:"{args}";eq;"weighted-choose";{call:taginfo-function:wchoose;};}
+    {when:"{args}";eq;"random-user";{call:taginfo-function:randuser;};}
+    {when:"{args}";eq;"nameof";{call:taginfo-function:nameof;};}
+    {when:"{args}";eq;"time";{call:taginfo-function:time;};}
+    {when:"{args}";eq;"userid";{call:taginfo-userid;};}
+    {when:"{args}";eq;"rng";{call:taginfo-function:rng;};}
+    {when:"{args}";eq;"set";{call:taginfo-function:set;};}
+    {when:"{args}";eq;"evaluation";{call:taginfo-evaluation;};}
+    {when:"{args}";eq;"function";{call:taginfo-function:function;};}
+    {when:"{args}";eq;"member";{call:taginfo-function:member;};}
+    {when:"{args}";eq;"when";{call:taginfo-function:when;};}
+    {when:"{args}";eq;"operators";{call:taginfo-operators;};}
+
+    {when:{thetagexist};eq;0;{call:taginfo-notexist;};}
+;}

@@ -1,0 +1,83 @@
+{oneline:
+    {set:thetagexist;0;}
+
+    {when:{crtagstyle{callerid}};eq;1;
+        {set:tagstyle;{tagstyle{callerid}};}
+    ;{set:tagstyle;+tag;};}
+
+    {when:{cradv{callerid}};eq;1;
+        {set:advanced;{advanced{callerid}};}
+    ;{set:advanced;False;};}
+
+    {when:{arglen};eq;0;{call:taginfo-missingarg;}{set:thetagexist;1;};}
+
+    {set:newarg;{lower:{arg1};};}
+    {set:newarg2;{lower:{arg2};};}
+    {set:newarg3;{lower:{arg3};};}
+    
+    {when:{arg1};in;
+    format,
+    format-2,
+    loop,
+    case,
+    length,
+    slice,
+    parse,
+    info,
+    basics,
+    basics-2,
+    help,
+    choose,
+    weighted-choose,
+    random-user,
+    time,
+    userid,
+    rng,
+    set,
+    evaluation,
+    evaluation-2,
+    function,
+    member,
+    nameof,
+    when,
+    operators,
+    replace,
+    settings,
+    split,
+    math,
+    announcements
+    ;{set:thetagexist;1;};}
+
+    {when:"{newarg}";eq;"info";{call:taginfo-info;};}
+    {when:"{newarg}";eq;"basics";{call:taginfo-basics;};}
+    {when:"{newarg}";eq;"basics-2";{call:taginfo-basics-2;};}
+    {when:"{newarg}";eq;"help";{call:taginfo-missingarg;};}
+    {when:"{newarg}";eq;"format";{call:taginfo-format;};}
+    {when:"{newarg}";eq;"format-2";{call:taginfo-format-2;};}
+    {when:"{newarg}";eq;"case";{call:taginfo-function:case;};}
+    {when:"{newarg}";eq;"length";{call:taginfo-function:length;};}
+    {when:"{newarg}";eq;"slice";{call:taginfo-function:slice;};}
+    {when:"{newarg}";eq;"parse";{call:taginfo-function:parse;};}
+    {when:"{newarg}";eq;"choose";{call:taginfo-function:choose;};}
+    {when:"{newarg}";eq;"weighted-choose";{call:taginfo-function:wchoose;};}
+    {when:"{newarg}";eq;"random-user";{call:taginfo-function:randuser;};}
+    {when:"{newarg}";eq;"nameof";{call:taginfo-function:nameof;};}
+    {when:"{newarg}";eq;"time";{call:taginfo-function:time;};}
+    {when:"{newarg}";eq;"userid";{call:taginfo-userid;};}
+    {when:"{newarg}";eq;"rng";{call:taginfo-function:rng;};}
+    {when:"{newarg}";eq;"set";{call:taginfo-function:set;};}
+    {when:"{newarg}";eq;"evaluation";{call:taginfo-evaluation;};}
+    {when:"{newarg}";eq;"evaluation-2";{call:taginfo-evaluation-2;};}
+    {when:"{newarg}";eq;"function";{call:taginfo-function:function;};}
+    {when:"{newarg}";eq;"member";{call:taginfo-function:member;};}
+    {when:"{newarg}";eq;"when";{call:taginfo-function:when;};}
+    {when:"{newarg}";eq;"operators";{call:taginfo-operators;};}
+    {when:"{newarg}";eq;"loop";{call:taginfo-function:loop;};}
+    {when:"{newarg}";eq;"replace";{call:taginfo-function:replace;};}
+    {when:"{newarg}";eq;"settings";{call:taginfo-settings;};}
+    {when:"{newarg}";eq;"split";{when:{advanced};eq;True;{call:taginfo-function:split;};{call:taginfo-notexist;};};}
+    {when:"{newarg}";eq;"math";{call:taginfo-mathematics;};}
+    {when:"{newarg}";eq;"announcements";{call:taginfo-announcements;};}
+
+    {when:{thetagexist};eq;0;{call:taginfo-notexist;};}
+;}
