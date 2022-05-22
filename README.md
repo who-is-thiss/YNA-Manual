@@ -9,4 +9,8 @@ You will need:
 Open your server, and run the following command: `+tag create manual`. Before sending the message, attach your .yna file to it. Then, send the message.
 If everything was done properly, you should get a confirmation message. Now, you can run `+tag manual` to use the Manual!
 
+## Updating
+It's super easy to update.
+All you have to do is download the new release, and instead of `+tag create manual`, use `+tag edit manual` and attatch the new file with the update.
+
 Got any problems? Contact me through my Discord! `Stevee#5134` or Twitter. `@stevewastaken__`
