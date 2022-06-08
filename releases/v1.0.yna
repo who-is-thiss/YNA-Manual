@@ -1,0 +1,496 @@
+{oneline:
+    {!!descshort A coding Manual to make tags.!}
+    {!!description A Tag Coding Manual so you can make your own 42 tags.!}
+
+    {set:newarg1;{lower:{arg1};};}
+    {set:newarg2;{lower:{arg2};};}
+
+    {when:{crtagstyle{callerid}};eq;1;
+        {set:tagstyle;{tagstyle{callerid}};}
+    ;{set:tagstyle;+tag;};}
+
+    {when:{cradv{callerid}};eq;1;
+        {set:advanced;{advanced{callerid}};}
+    ;{set:advanced;False;};}
+
+    {func:f_argcheck;
+    {set:argexist;1;}
+    ;}
+
+    {func:f_notexist;
+    You have chosen an option that doesn't exist.\n
+    To see the list of available manual pages, run `{tagstyle} {tag}`.\n
+\n
+    \(Is this a bug? Send me a message. {me}\)\n
+    ;}
+
+    {func:f_info;
+    Welcome to the **YNA Manual Revamped**.\n
+    In here, you can find some basic information on coding tags for <@196574963673595904>.\n
+    If you'd like a more advanced guide on everything about tags, you can go into this website: https://42.rockett.space/yna.html#tagyna\n
+    \n
+    This manual was made by {me} \(me\). Did you find an issue with the tag manual? Please ping me and describe the problem.\n
+    \n
+    Special Thanks to: `Mustfa1980#1345` and `RHVGamer#7970` for helping with the code.\n
+    To get started making tags, run: `{tagstyle} {tag} basics`\n
+    \n
+    Do you want the Manual in your own server? Add it! https://github.com/SteveeWasTaken/YNA-Manual/releases/latest
+    \n
+    Thank you for using the Manual, and have fun coding!\n
+    - Steven\n
+    ;}
+    
+    {func:f_basics;
+    Welcome to 42's tags basics! Let's take a look at a few commands you'll be using if you're gonna use the **YNA Manual Revamped**.\n
+\n
+    `{tagstyle} eval '<command-goes-here>' '<arguments-to-run>'` This command will evaluate whatever you give it. It's useful to test code without having to create too many tags.\n
+    `{tagstyle} raw <name-of-tag>` This command will give you a tag's source code, without running it. WARNING: This will not work if the tag's owner set it as closed code.\n
+    `{tagstyle} closed <name-of-tag>` This command will set a tag as closed source code. It only works if you own the tag. Run the command again to make it open source again.\n
+    `{tagstyle} create <name-of-tag> <content>` This command creates a tag with the given name, and contains the given content. Instead of writing the content itself, you can make a .yna file containing code or text, and upload it as an attachment in the same message.\n
+    `{tagstyle} delete <name-of-tag>` This command permanently deletes a tag. Be very careful with this command, as you can't undo it once run.\n
+    `{tagstyle} debug <name-of-tag>` This command will let you see how the tag is executed, and you can find errors there.\n
+    `{tagstyle} spoiler <name-of-tag>` This command changes a tag so it won't appear when `{tagstyle} random` is run.\n
+    `{tagstyle} edit <name-of-tag> <content>` This command will replace whatever was previously in the tag, with the new content given. Works pretty much the same as ` {tagstyle} create`.\n
+\n
+    Go to the next Basics page: `{tagstyle} {tag} basics2`\n
+    ;}
+
+    {func:f_basics2;
+    Now that you know how to create a tag, let's start by putting some content inside of them.\n
+\n
+    To make 42 display simple text without any coding knowledge, use: `{tagstyle} create <your-tag> Hello World!`\n
+    Now, to display \"Hello World!\", run `{tagstyle} <your-tag>`\n
+\n
+    Now that your tag was created, let's edit it and add some coding! For example, let's make 42 output whatever you give it as an argument. Edit your tag, and add the following: `{tagstyle} edit <your-tag> Your message was: {>args}`.\n
+    It will display whatever you want, just run `{tagstyle} <your-tag> <your-message>`. Keep in mind! It will break if you don't add a message.\n
+\n
+    That's pretty much it for the basics! Keep reading this manual, and I'm sure you'll understand the YNA coding language in no-time!\n
+\n
+    Start by running `{tagstyle} {tag} help` to get access to the complete manual. Have fun!\n
+
+    ;}
+
+    {func:f_userid;
+    == UserIDs ==\n
+\n
+    IDs in Discord identify users. They can't change.\n
+    How can you get someone's ID?\n
+    1. Go to Settings>Advanced. \(Image 1\)\n
+    2. Enable "Developer Mode".\n
+    3. Right click on someone's user, and click copy ID.\n
+    4. Done!\n
+\n
+    But what if you're in phone? It's easy, too.\n
+    1. Go to Settings>Behavior. \(Image 2\)\n
+    2. Enable "Developer Mode".\n
+    3. Tap on a user's profile picture.\n
+    4. At the bottom, tap "Copy ID".\n
+    5. Done!\n
+    https://i.postimg.cc/L51r85pc/image.png\n
+    https://i.postimg.cc/ht5bprx0/image.png\n
+    ;}
+
+    {func:f_eval;
+    == Evaluation Objects ==\n
+    There are two types of objects. "Format Objects" and "Evaluation Objects". Evaluation Objects are basically commands, and can be very powerful if used correctly.\n
+\n
+    To read more information on these, please run `{tagstyle} {tag} <choice>` and choose any of the options below.\n
+    Go to page 2: `{tagstyle} {tag} evaluation-2`\n
+\n
+    `case\n
+    length\n
+    slice\n
+    time\n
+    parse\n
+    choose\n
+    weighted-choose\n
+    random-user\n
+    nameof\n
+    rng`\n
+    ;}
+
+    {func:f_eval2;
+    == Evaluation Objects ==\n
+    There are two types of objects. "Format Objects" and "Evaluation Objects". Evaluation Objects are basically commands, and can be very powerful if used correctly.\n
+\n
+    To read more information on these, please run `{tagstyle} {tag} <choice>` and choose any of the options below.\n
+    Go to page 1: `{tagstyle} {tag} evaluation`\n
+\n
+    `set\n
+    function\n
+    member\n
+    when\n
+    loop\n
+    replace\n
+    split\n
+    oneline\n
+    void\n
+    save`\n
+    {when:{advanced};eq;True;\n;}
+    {when:{advanced};eq;True;== Advanced ==\n;}
+    {when:{advanced};eq;True;`mathematics`\n;}
+    ;}
+
+    {func:f_format;
+    == Format Objects ==\n
+    There are two types of objects. "Format Objects" and "Evaluation Objects". Format Objects will output a value, nothing too special. To use them, surround them with curly brackets. {>tag}\n
+    Go to page 2: `{tagstyle} {tag} format-2`\n
+\n
+    `tag` = {tag} \(The tag's name.\)\n
+    `me` = {me} \(Tag creator.\)\n
+    `meid` = {meid} \(Tag creator's ID.\)\n
+    `caller` = {caller} \(Who run the command.\)\n
+    `callerid` = {callerid} \(The ID of the person running the command.\)\n
+    `channel` = {channel} \(The channel where the command was run.\)\n
+    `channelid` = {channelid} \(The channel's ID where the command was run.\)\n
+    `server` = {server} \(Server's name.\)\n
+    `serverid` = {serverid} \(The server's ID.\)\n
+    `time` = {time} \(Current time as of when the command was run.\)\n
+    `uses` = {uses} \(How many times the command was used.\)\n
+    ;}
+
+    {func:f_format2;
+    == Format Objects ==\n
+    There are two types of objects. "Format Objects" and "Evaluation Objects". Format Objects will output a value, nothing too special. To use them, surround them with curly brackets. {>tag}\n
+    Go to page 1: `{tagstyle} {tag} format`\n
+\n
+    `arglen` = {arglen} \(The length of the arguments.\)\n
+    `arg1` = {arg1} \(First argument. Might say "<arg1:missing arg>" if the tag was ran without any arguments.\) \n
+    `arg2` = {arg2} \(Second argument.\) \n
+    `arg#` = {>arg#} \(#th argument.\)\n
+    `args` = {args} \(All the arguments as a single line.\)\n
+    `mentionlen` = {mentionlen} \(The amount of mentions.\)\n
+    `mention1` = {mention1} \(First mention. Will output "<mention1:unknown key>" if no mentions are in the message.\)\n
+    `mention2` = {mention2} \(Second mention.\)\n
+    `mention#` = {>mention#} \(#th mention.\)\n
+    `newrep` = {newrep} \(For information on this one, please run `{tagstyle} {tag} replace`.\n
+    `generic` = {generic} \(Whether or not a tag is generic. Generic Tags are those that come with 42, no matter the server.\)\n
+    `base` = {base} \(This stays as "true" until {>call} is used. Then it turns to "false".\)\n
+    ;}
+
+    {func:f_case;
+    == Case ==\n
+    These change the given content to UPPERCASE, lowercase, or Title Case.\n
+        The ***Syntax:***\n
+        `{>upper:text;}` displays: ```TEXT```\n
+        `{>lower:text;}` displays: ```text```\n
+        `{>title:text;}` displays: ```Text```\n
+    ;}
+
+    {func:f_choose;
+== Choose ==\n
+Chooses a random item from a list given.\n
+    ***Syntax:***\n
+    `{>choose:\'First Option!\';\'Second Option!\';}` displays either `First Option!` or `Second Option!`. It's impossible to know what it will output before running the command. You can add as many options as you wish\n
+    ;}
+
+    {func:f_func;
+== Functions ==\n
+Functions work just like `{>set}`, but for code only. Simple!\n
+    ***Syntax:***\n
+    `{>func:myfunction;{>choose:one;two;};}` will create a new object called {>myfunction}. Whenever you call it, the code `{>choose:one;two;}` will run.\n
+**You can store plain text on them, but it's not recommended. For this, you should use `set` or `save`! \(Check them at `{tagstyle} {tag} set` or `{tagstyle} {tag} save`.\)**\n
+    `{>func:myfunction;Hello!;}` will create a new object called {>myfunction}. Whenever you call it, it will display \"Hello!\".\n
+    ;}
+
+    {func:f_len;
+== Length ==\n
+Gives you the length of the given content. \(With spaces.\)\n
+    ***Syntax:***\n
+    `{>len:Hello world!;}` displays: ```{len:Hello world!;}```\n
+    ;}
+
+    {func:f_loop;
+    == Looping ==\n
+**This will repeat a certain command until a counter reaches the number given.**\n
+    ***Syntax:***\n
+    `{>loop:1,10,1;Hi! ;}` will repeat \"Hi!\" 10 times. Keep in mind to add the space after the word so that it's separated.\n
+**So we add 1 to the first number \(which in our example is 1\) until it reaches 10. We can change how much we're adding to the number.**\n
+    `{>loop:1,10,2;Hi! ;}` will repeat \"Hi!\" only 5 times.\n
+**This time, we add 2 every step. 1+2=3, 3+2=5, 5+2=7, and 7+2=9. But since the maximum is 10, the program stops at 9, since 9+2=11.**\n
+**You can also run code!**\n
+    `{>loop:1,10,1;{>user:display_name;};}` will run {>user:display_name;} 10 times. Simple, right?\n
+    ;}
+
+    {func:f_math;
+== Mathematical Operations ==\n
+Basically a calculator in your own 42 tags, with many options and operators available.\n
+    ***Syntax:***\n
+    `{>math:add;5;4;}` will output 9, as it's running the math operation "5+4", which results in 9.\n
+There are lots of operators you can use. You can find the list here: https://42.rockett.space/yna.html#math\n
+Just replace `add` in the example above with the operator you want to use.\n
+    ;}
+
+    {func:f_member;
+== Member Fetch ==\n
+Saves a Discord User as a variable, and finds said user by Username or Discord Tag.\n
+    ***Syntax:***\n
+    `{>member:myvariable;StevenWasTaken;}` will search any users with the nickname "StevenWasTaken", and will create a new object called {>mymariable} with their full Discord Tag \(if existing\).\n
+    ;}
+
+    {func:f_nameof;
+== NameOf ==\n
+Gives you the attribute of a member. Can be edited.\n
+    ***Syntax:***\n
+    `{>nameof:{callerid};display_name;}` displays: ```{nameof:{callerid};display_name;}```\n
+**\(In this example, we search for the ID {callerid} and we show the display_name attribute of it.\) There's different attributes!**\n
+    `{>nameof:196574963673595904;nick;}` displays: ```{nameof:196574963673595904;nick;}```\n
+**If you wish to use this, you must have an user's ID. How can you get it? Use the following command: `{tagstyle} {tag} userid`**\n
+**To see the full list of attributes, go to this website: https://discordpy.readthedocs.io/en/rewrite/api.html#member**\n
+    ;}
+
+    {func:f_operators;
+== Operators ==\n
+These operators are made to work with `when`.\n
+When using `is`, replace the second argument to compare to with any of the options below `is`.\n
+\(Example: word,letter,number\)\n
+\n
+    `eq` Checks that a and b are the same.\n
+    `ne` Checks that a and b are different.\n
+    `lt` Checks that a is strictly less than b.\n
+    `le` Checks that a is less than or equal to b.\n
+    `gt` Checks that a is strictly greater than b.\n
+    `ge` Checks that a is greater than or equal to b.\n
+    `in` Checks that a is a substring of b.\n
+    `in` Checks that a matches an element in the comma seperated list in b.\n
+    `is` Checks that a is of the type defined in b\n
+    _     _`word` Checks if a is a single word.\n
+    _     _`letter` Checks if a is a single letter.\n
+    _     _`number` Checks if a is castable to int.\n
+    _     _`decimal` Checks if a is castable to float.\n
+    _     _`error` Checks if a is a yna exception.\n
+	_     _`/regex/` Checks if a matches the regex.\n
+    ;}
+
+    {func:f_parse;
+== Parse ==\n
+Changes the content given into URL-Friendly characters.\n
+	***Syntax:***\n
+	`{>parse:'Hey there! How are you?';}` displays: ```{parse:`Hey there! How are you?`;}```\n
+    ;}
+
+    {func:f_rng;
+    == Random Number Generator ==\n
+Generates a random number in the range you choose.\n
+    ***Syntax:***\n
+    `{>num:1;10;}` displays a random number between 1 and 10.\n
+It works even with negative numbers!\n
+    `{>num:-5;15;}` will display a random number between -5 and 15.\n
+    ;}
+
+    {func:f_user;
+    == Random User ==\n
+Selects a user at random, and displays the given attribute.\n
+    ***Syntax:***\n
+    `{>user;}` displays: ```{user;}```\n
+**You can change what you see from the user.**\n
+    `{>user:display_name;}` displays: ```{user:display_name;}```\n
+**To see the full list of attributes, go to this website: https://discordpy.readthedocs.io/en/rewrite/api.html#member**\n
+    ;}
+
+    {func:f_replace;
+    == Replace ==\n
+Find a specified letter/expression and replace it with another letter/expression.\n
+    ***Syntax:***\n
+    `{>rep:hey;\"Hey everyone\!\";Hello;}` will search in the text \"Hey everyone\!\" for the word \"hey\", and then, replace it with \"Hello\", so it will display {rep:hey;\"Hey everyone\!\";Hello;}\n
+**There's a new syntax that you can enable. If you wish to do so, you must run the following command: `{>set:newrep;true;}` and then use the new syntax.**\n
+    `{>rep:hey;Hello;\"Hey everyone\!\";}` is the new syntax. In this example, it'll do the exact same thing as the one above. Just switch the last two arguments!\n
+    ;}
+
+    {func:f_set;
+== Set & Working with Variables ==\n
+**The `{>set}` function is a way for you to store TEXT inside of objects. It's really powerful! \(Keep in mind: The Variables will reset once the Tag is finished executing. If you want to prevent this, read the Manual's entry on `{save}`.\)**\n
+    ***Syntax:***\n
+    `{>set:myvar;hello}` will create a new object called {>myvar}. To mention it, use it as you would use a *format* object. Just do {>myvar}.\n
+**If you wish, you can store code in them, but it's not really recommended. For this, you should use `function`! \(Go to `{tagstyle} {tag} function` to learn more about it.\)**\n
+    `{>set:myvar;{>choose:Hi;Hello;};}` will create a new object called {>myvar}, and when executed, will run `{>choose:Hi;Hello;}`. \n
+**You can check more about the `choose` object with `{tagstyle} {tag} choose`.**\n
+    ;}
+
+    {func:f_slice;
+== Slice ==\n
+Cuts text. Simple, right?\n
+    ***Syntax:***\n
+    `{>slice:3;this;}` displays: ```s``` \(It will give you the #+1 character. If given `{>slice:5;<your-text-here>;}`, it will give you the 6th character. Counts spaces too.\)\n
+    ;}
+
+    {func:f_split;
+== Split ==\n
+This is a really interesting object. It's a bit complicated, but not too hard. It can split a defined message based on a given separator, and will save the outputs to given variables.\n
+    ***Syntax:***\n
+    `{>split:myvariable;Hi.Everyone.I'm.Steve!;.;}` will output 4. Which is the amount of variables created. Now, this object has created the following variables: {>myvariable1} {>myvariable2} {>myvariable3} and {>myvariable4}.\n
+Each one of these contains a word from the message given, since we told it to use the separator \".\" and so, we have that {>myvariable1} is \"Hi", and {>myvariable2} is \"Everyone\" and so on.\n
+Of course, you can change the separator. You can use a space!\n
+    `{>split:words;This is my message.; ;}` will output 4 again., since it's the amount of words that are divided by our separator \(which is just a space.\), and to see the words, we use again the variables {>words1} to {>words4}.\n
+    ;}
+
+    {func:f_time;
+== Time ==\n
+Displays the current UTC time. Can be modified.\n
+    ***Syntax:*** \n
+    `{>time}` displays: ```{time}```\n
+    `{>time:1;}` displays: ```{time:1;}``` \(The number is the hours added to the time given. In this example, we added one.\)\n
+**You can also edit it to make it look different!**\n
+    `{>time:1;%H:%M:%S;}` displays: ```{time:1;%H:%M:%S;}```\n
+**You can find all the templates here: https://docs.python.org/3.4/library/datetime.html#strftime-strptime-behavior**\n
+**Just change the `%H:%M:%S` to whatever you prefer.**\n
+    `{>time:1;%d/%m/%Y-%H:%M:%S;}` displays: ```{time:1;%d/%m/%Y-%H:%M:%S;}``` \(In this example you can see the day, month, and year.\)\n
+**You can also store it to variables! \(NOTE: If you do so, you can't use custom templates. Only `%H:%M` works.\)**\n
+    `{>time<k>:1;;}` displays nothing. To show the saved test, use: `{>time<k>;}` which displays: ```{time<k>;}``` \(The letter can be changed.\)\n
+    ;}
+
+    {func:f_weightedchoose;
+== Weighted Choose ==\n
+Chooses a random item from a list given, allowing you to customize the chance of getting each one.\n
+    ***Syntax:***\n
+    `{>wchoose:\'First Option!\';1;\'Second Option!\';4;}` displays either `First Option!` or `Second Option!`, but there's a bigger chance you'll get the second one.\n
+    ;}
+
+    {func:f_when;
+== Conditionals ==\n
+These are probably the strongest command available. They will run other commands depending if conditions are met, as their name suggests.\n
+    ***Syntax:***\n
+    `{>when:{>args};eq;1;"It's one!";"It's not one.";}` will output \"It's one!\" if the arguments given were "1". If not, it will output \"It's not one.\". Simple enough, right?\n
+**But you can do more than check if they're equal! All the operations you can do with `when` can be found in `{tagstyle} {tag} operators`. Just replace \"eq\" with the operation you prefer. (WARNING: In the manual's entry for operators, \"a\" refers to the first argument, in this example, {>args}. \"b\" refers to the second argument, in this example, 1.**\n
+    ;}
+
+    {func:f_oneline;
+== Oneline ==\n
+Helps you format code in a readable way without adding tons of whitespaces. It's simple, really.\n
+    ***Syntax:***\n
+    ```{>oneline:\n
+            {>math:add;9;10;}\n
+            {>when:{>callerid};eq;907376451601432596;Hi Stevee!;You aren't Stevee.;}\n
+    ;}``` This will help you condense everything into a single line, instead of showing useless whitespace lines.\n
+    ;}
+
+    {func:f_void;
+== Voiding Output==\n
+Runs a command, then hides the output. Useful for some objects like Split.\n
+    ***Syntax:***\n
+    `{>void:{>math:add;9;10;};}` will output nothing. If you wanted to see the result of {>math:add;9;10;}, you must set it to a variable. Read about it: `{tagstyle} {tag} output-saving`\n
+    ;}
+
+    {func:f_save;
+== Saving Variables ==
+The Save object is just like the {>set} object, but the difference is that when Saving a Variable, this will NOT be reset when the Tag ends, unlike the Set command.
+    ***Syntax:***\n
+    ;}
+
+    {func:f_noarg;
+    Welcome to the **YNA Manual Revamped**! Where will you go?\n
+\n
+    == Manual ==\n
+    `info`\n
+    `settings`\n
+    `basics`\n
+    `changelog`\n
+    \n
+    == Objects ==\n
+    `evaluation`\n
+    `format`\n
+    \n
+    == Misc ==\n
+    `userid`\n
+    `output-saving`\n
+    \n
+    **Page 2: {tagstyle} {tag} help-2**\n
+    Please run `{tagstyle} {tag} <choice>`.\n
+    You're currently using **v1.0**.\n
+    ;}
+
+    {func:f_changelog;
+    **1.0\n**
+    - The first public release of the Manual.
+    ;}
+
+    {func:f_n;
+    == Ñ ==\n
+    ñ.\n
+    ***Syntax:***\n
+    {>ñ} ñ.\n
+    ||Easter Egg: 1/1||
+    ;}
+
+    {func:f_set_advanced;
+        {oneline:
+        {save:cradv{callerid};1;}
+        {when:{advanced};eq;True;{save:advanced{callerid};False;}{set:isAdvTrue;0;};{save:advanced{callerid};True;}{set:isAdvTrue;1;};}
+        {when:{isAdvTrue};eq;1;Succesfully enabled Advanced Manual Chapters.;}
+        {when:{isAdvTrue};eq;0;Succesfully disabled Advanced Manual Chapters.;}
+        ;}
+    ;}
+
+    {func:f_set_tagstyle;
+        {oneline:
+        {save:crtagstyle{callerid};1;}
+        {when:{tagstyle};eq;+tag;{save:tagstyle{callerid};+t;}{set:isShortTag;1;};{save:tagstyle{callerid};+tag;}{set:isShortTag;0;};}
+        {when:{isShortTag};eq;1;Succesfully changed your Tag Style to `+t`.;}
+        {when:{isShortTag};eq;0;Succesfully changed your Tag Style to `+tag`.;}
+        ;}
+    ;}
+
+    {func:f_settingsnoarg;
+    Welcome to the Manual Settings.\n
+    To change the Value, please run: `{tagstyle} {tag} settings <command>`\n
+\n
+    COMMAND | NAME | DESCRIPTION | VALUE\n
+\n
+    `tagstyle` | Tag Command Style | How you'll see 42's TAG command. \(You can use both +t and +tag!\) | {tagstyle}\n
+    `advanced` | Advanced Manual | Adds new functions to the Manual, some of which are harder to understand. | {advanced}\n
+    ;}
+
+    {func:f_settings;
+        {oneline:
+        {when:{arglen};eq;1;{set:hasArgs;0;};{set:hasArgs;1;};}
+        {when:{newarg2};eq;tagstyle;{f_set_tagstyle};}
+        {when:{newarg2};eq;advanced;{f_set_advanced};}
+        {when:{hasArgs};eq;0;{f_settingsnoarg};}
+        ;}
+    ;}
+
+        {when:{arglen};gt;0;
+            {when:{newarg1};eq;info;{f_info}{f_argcheck};}
+            {when:{newarg1};eq;basics;{f_basics}{f_argcheck};}
+            {when:{newarg1};eq;basics2;{f_basics2}{f_argcheck};}
+            {when:{newarg1};eq;userid;{f_userid}{f_argcheck};}
+            {when:{newarg1};eq;settings;{f_settings}{f_argcheck};}
+            {when:{newarg1};eq;changelog;{f_changelog}{f_argcheck};}
+            {when:{newarg1};eq;evaluation;{f_eval}{f_argcheck};}
+            {when:{newarg1};eq;evaluation-2;{f_eval2}{f_argcheck};}
+            {when:{newarg1};eq;format;{f_format}{f_argcheck};}
+            {when:{newarg1};eq;format-2;{f_format2}{f_argcheck};}
+            {when:{newarg1};eq;help;{f_noarg}{f_argcheck};}
+
+            {when:{newarg1};eq;case;{f_case}{f_argcheck};}
+            {when:{newarg1};eq;choose;{f_choose}{f_argcheck};}
+            {when:{newarg1};eq;function;{f_func}{f_argcheck};}
+            {when:{newarg1};eq;length;{f_len}{f_argcheck};}
+            {when:{newarg1};eq;loop;{f_loop}{f_argcheck};}
+            {when:{newarg1};eq;mathematics;{f_math}{f_argcheck};}
+            {when:{newarg1};eq;nameof;{f_nameof}{f_argcheck};}
+            {when:{newarg1};eq;operators;{f_operators}{f_argcheck};}
+            {when:{newarg1};eq;parse;{f_parse}{f_argcheck};}
+            {when:{newarg1};eq;rng;{f_rng}{f_argcheck};}
+            {when:{newarg1};eq;random-user;{f_user}{f_argcheck};}
+            {when:{newarg1};eq;replace;{f_replace}{f_argcheck};}
+            {when:{newarg1};eq;set;{f_set}{f_argcheck};}
+            {when:{newarg1};eq;slice;{f_slice}{f_argcheck};}
+            {when:{newarg1};eq;split;{f_split}{f_argcheck};}
+            {when:{newarg1};eq;time;{f_time}{f_argcheck};}
+            {when:{newarg1};eq;weighted-choose;{f_weightedchoose}{f_argcheck};}
+            {when:{newarg1};eq;when;{f_when}{f_argcheck};}
+            {when:{newarg1};eq;oneline;{f_oneline}{f_argcheck};}
+            {when:{newarg1};eq;void;{f_void}{f_argcheck};}
+
+            {when:{newarg1};eq;ñ;{f_n}{f_argcheck};}
+        ;{f_noarg}{f_argcheck};}
+        {when:{argexist};is;error;{f_notexist};}
+
+        {init}Thank you for installing the YNA Manual. I hope you enjoy using it as much as I enjoyed creating it.
+
+        This Manual has been created by SteveeWasTaken on GitHub, please go send me some support! https://github.com/SteveeWasTaken/YNA-Manual
+        Enjoy the YNA Manual!
+
+        - SteveeWasTaken{endinit}
+;}
