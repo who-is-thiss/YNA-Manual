@@ -1,1 +1,0 @@
-{when:{arglen};eq;0;{call:taginfo-missingarg;};{call:taginfo-checker;};}
