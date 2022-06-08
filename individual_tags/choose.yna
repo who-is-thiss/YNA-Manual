@@ -1,5 +1,0 @@
-== Choose ==
-Chooses a random item from a list given.
-	***Syntax:***
-	\"\{choose:\'First Option!\';\'Second Option!\';}\" displays either `First Option!` or `Second Option!`. It's impossible to know what it will output before running the command. You can add as many options as you wish!
-

@@ -1,9 +1,0 @@
-== Looping ==
-**This will repeat a certain command until a counter reaches the number given.**
-    ***Syntax:***
-    `\{loop:1,10,1;Hi! ;}` will repeat \"Hi!\" 10 times. Keep in mind to add the space after the word so that it's separated.
-**So we add 1 to the first number until it reaches 10. We can change how much we're adding to the number.**
-    `\{loop:1,10,2;Hi! ;}` will repeat \"Hi!\" only 5 times.
-**This time, we add 2 every step. 1+2=3, 3+2=5, 5+2=7, and 7+2=9. But since the maximum is 10, the program stops at 9, since 9+2=11.**
-**You can also run code!**
-    `\{loop:1,10,1;\{user:display_name;};}` will run \{user:display_name;} 10 times. Simple, right?

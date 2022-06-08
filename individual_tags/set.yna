@@ -1,7 +1,0 @@
-== Set & Working with Variables ==
-**The \{set} function is a way for you to store TEXT inside of objects. It's really powerful! (Keep in mind: The Variables will reset once the Tag is finished executing. If you want to prevent this, read the Manual's entry on \{save}.)**
-    ***Syntax:***
-    `\{set:myvar;hello}` will create a new object called \{myvar}. To mention it, use it as you would use a *format* object. Just do \{myvar}.
-**If you wish, you can store code in them, but it's not really recommended. For this, you should use `function`! (Go to `+t manual function` to learn more about it.)**
-    `\{set:myvar;\{choose:Hi;Hello;};}` will create a new object called \{myvar}, and when executed, will run `\{choose:Hi;Hello;}`. 
-**You can check more about the `choose` object with `+t manual choose`.**

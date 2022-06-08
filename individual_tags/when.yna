@@ -1,5 +1,0 @@
-== Conditionals ==
-These are probably the strongest command available. They will run other commands depending if conditions are met, as their name suggests.
-    ***Syntax:***
-    `\{when:\{args};eq;1;"It's one!";"It's not one.";}` will output \"It's one!\" if the arguments given were "1". If not, it will output \"It's not one.\". Simple enough, right?
-**But you can do more than check if they're equal! All the operations you can do with `when` can be found in `+t manual operators`. Just replace \"eq\" with the operation you prefer. (WARNING: In the manual's entry for operators, \"a\" refers to the first argument, in this example, \{args}. \"b\" refers to the second argument, in this example, 1.**
