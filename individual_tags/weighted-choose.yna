@@ -1,5 +1,0 @@
-== Weighted Choose ==
-Chooses a random item from a list given, allowing you to customize the chance of getting each one.
-	***Syntax:***
-	`\{wchoose:\'First Option!\';1;\'Second Option!\';4;}` displays either `First Option!` or `Second Option!`, but there's a bigger chance you'll get the second one.
-

@@ -1,6 +1,0 @@
-{oneline:
-    {save:crtagstyle{callerid};1;}
-    {when:{tagstyle};eq;+tag;{save:tagstyle{callerid};+t;}{set:isShortTag;1;};{save:tagstyle{callerid};+tag;}{set:isShortTag;0;};}
-    {when:{isShortTag};eq;1;Succesfully changed your Tag Style to `+t`.;}
-    {when:{isShortTag};eq;0;Succesfully changed your Tag Style to `+tag`.;}
-;}

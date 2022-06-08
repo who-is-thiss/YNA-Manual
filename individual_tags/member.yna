@@ -1,4 +1,0 @@
-== Member Fetch ==
-Saves a Discord User as a variable, and finds said user by Username or Discord Tag.
-    ***Syntax:***
-    `\{member:myvariable;StevenWasTaken;}` will search any users with the nickname "StevenWasTaken", and will output their full Discord Tag.

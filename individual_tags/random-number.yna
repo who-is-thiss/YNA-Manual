@@ -1,4 +1,0 @@
-== Random Number Generator ==
-Generates a random number in the range you choose.
-    ***Syntax:***
-    `\{num:1;10;}` displays a random number between 1 and 10. It works even with negative numbers!

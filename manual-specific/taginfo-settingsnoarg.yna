@@ -1,7 +1,0 @@
-Welcome to the Manual Settings.
-To change the Value, please run: `{tagstyle} {tag} settings <command>`
-
-COMMAND | NAME | DESCRIPTION | VALUE
-
-`tagstyle` | Tag Command Style | How you'll see 42's TAG command. (You can use both +t and +tag!) | {tagstyle}
-`advanced` | Advanced Manual | Adds new functions to the Manual, some of which are harder to understand. | {advanced}

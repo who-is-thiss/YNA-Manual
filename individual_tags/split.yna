@@ -1,7 +1,0 @@
-== Split ==
-This is a really interesting object. It's a bit complicated, but not too hard. It can split a defined message based on a given separator, and will save the outputs to given variables.
-    ***Syntax:***
-    `\{split:myvariable;Hi.Everyone.I'm.Steve!;.;}` will output 4. Which is the amount of variables created. Now, this object has created the following variables: \{myvariable1} \{myvariable2} \{myvariable3} and \{myvariable4}.
-Each one of these contains a word from the message given, since we told it to use the separator \".\" and so, we have that \{myvariable1} is \"Hi", and \{myvariable2} is \"Everyone\" and so on.
-Of course, you can change the separator. You can use a space!
-    `\{split:words;This is my message.; ;}` will output 4 again., since it's the amount of words that are divided by our separator (which is just a space.), and to see the words, we use again the variables \{words1} to \{words4}.

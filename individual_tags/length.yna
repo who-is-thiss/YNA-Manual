@@ -1,4 +1,0 @@
-== Length ==
-Gives you the length of the given content. (With spaces.)
-	***Syntax:***
-	`\{len:this is text}` displays: ```12```
