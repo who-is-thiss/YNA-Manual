@@ -13,4 +13,4 @@ If everything was done properly, you should get a confirmation message. Now, you
 It's super easy to update.
 All you have to do is download the new release, and instead of `+tag create manual`, use `+tag edit manual` and attatch the new file with the update.
 
-Got any problems? Contact me through my Discord! `SteveeWasTaken#5134` or Twitter. `@stevewastaken__`
+Got any problems? Contact me through my Discord! You can find it on the tag, under `info`.
